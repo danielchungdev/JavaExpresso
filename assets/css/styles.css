@@ -1,1 +1,19 @@
-this is the style page
+body {
+  background-color: #363636;
+  font-family: Verdana, Geneva, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+#feature_image {
+  max-width: 70%;
+}
+#feature_image img {
+  width: 100%;
+}
