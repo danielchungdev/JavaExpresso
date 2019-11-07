@@ -1,9 +1,23 @@
+:root {
+  --burnt-coffee: #363636;
+  --dark-coffee: #66462f;
+  --medium-coffee: #98694f;
+  --light-coffee: #CA9E7B;
+  --blonde-coffee: #F5EDDA;
+  --default-font-size: 36px;
+}
+
 body {
-  background-color: #363636;
+  background-color: var(--burnt-coffee);
   font-family: Verdana, Geneva, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+#landing_page {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -16,4 +30,35 @@ h1 {
 }
 #feature_image img {
   width: 100%;
+}
+
+#start {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: none;
+  border-radius: 100px;
+  padding: 40px 60px;
+  text-decoration: none;
+  font-size: var(--default-font-size);
+  background-color: var(--medium-coffee);
+  color: var(--blonde-coffee);
+  cursor: pointer;
+}
+
+.underline {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.90;
+}
+
+.ghost_button {
+  border-radius: 0;
+  padding: 0;
+  font-size: calc(.7 * var(--default-font-size));
+  background-color: transparent;
+  color: var(--blonde-coffee);
+  margin: 15px;
 }
