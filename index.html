@@ -48,15 +48,17 @@
       <!--[About Us]-->
       <div id="from_the_team">
         <div id="team_content">
-          <div id="team_slideshow">
-             <div class="slides fade">
-               <img src="assets/images/test_image_1.jpg"/>
-             </div>
-             <div class="slides fade">
-               <img src="assets/images/test_image_2.jpg"/>
-             </div>
-             <!--[Next button]-->
-             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div id="slideshow_container">
+            <div id="team_slideshow">
+               <div class="slides fade">
+                 <img src="assets/images/test_image_1.jpg"/>
+               </div>
+               <div class="slides fade heightFix">
+                 <img src="assets/images/test_image_2.jpg"/>
+               </div>
+            </div>
+            <!--[Next button]-->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
           <div id="team_text">
             <h2>From the Team</h2>
@@ -67,7 +69,7 @@
                 Suspendisse potenti. Donec dictum nibh ac odio euismod, sed aliquet
                 lorem vestibulum. Nullam iaculis risus vel ullamcorper commodo.
             </p>
-            <button class="button">
+            <button class="button contact_us">
               Contact Us
             </button>
           </div>
