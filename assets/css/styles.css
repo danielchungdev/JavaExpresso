@@ -98,11 +98,32 @@ p {
 #features_image {
   min-width: 50vw;
   display: flex;
-  justify-content: flex;
+  justify-content: center;
 }
 
 #features_image img {
   object-fit: contain;
   width: 100%;
   max-height: 1000px;
+}
+
+#from_the_team {
+  display: flex;
+  align-items: center;
+}
+
+#team_content {
+  display: flex;
+}
+
+.clip-circle {
+  clip-path: circle(60px at center);
+}
+
+#team_slideshow {
+  min-width: 50vw;
+}
+
+#team_slideshow img{
+  width: 100%;
 }
