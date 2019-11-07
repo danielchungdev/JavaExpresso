@@ -117,16 +117,18 @@ p {
 #team_slideshow {
   min-width: 50vw;
   align-self: center;
-  display: relative;
-  /* clip-path: circle(500px at center); */
+  clip-path: circle(450px at 25%);
 }
 
 #team_slideshow img{
-  width: 100%;
+  width: 200%;
+  object-fit: cover;
 }
 
 .slides {
   display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Fading animation */
