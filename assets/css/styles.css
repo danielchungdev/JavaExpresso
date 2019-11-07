@@ -1,17 +1,20 @@
+/* variable declarations */
 :root {
   --burnt-coffee: #363636;
   --dark-coffee: #66462f;
   --medium-coffee: #98694f;
   --light-coffee: #CA9E7B;
   --blonde-coffee: #F5EDDA;
-  --default-font-size: 36px;
+  --default-font-size: 3vw;
 }
 
+/* reset margin and padding */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* set every page to be in single column format */
 body {
   background-color: var(--burnt-coffee);
   font-family: Verdana, Geneva, sans-serif;
@@ -20,6 +23,7 @@ body {
   align-items: center;
 }
 
+/* landing page properties */
 #landing_page {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,7 @@ h1 {
 }
 
 #logo_image {
-  max-width: 70%;
+  max-width: 60%;
 }
 #logo_image img {
   width: 100%;
@@ -53,6 +57,10 @@ h1 {
   cursor: pointer;
 }
 
+.start_button{
+  margin-top: calc(-.1 * var(--default-font-size))
+}
+
 .underline {
   border-bottom: 2px solid currentColor;
   display: inline-block;
@@ -68,6 +76,7 @@ h1 {
   margin: 15px 0 60px 0;
 }
 
+/* java features properties*/
 #java_features {
   background-color: var(--dark-coffee);
   display: flex;
@@ -78,14 +87,15 @@ h2 {
   font-weight: bold;
   color: var(--light-coffee);
   font-size: calc(2 * var(--default-font-size));
-  padding: 100px 70px;
+  padding: 100px 60px;
   text-align: center;
 }
 
 p {
-  font-size: var(--default-font-size);
+  font-size: calc(.66 * var(--default-font-size));
   color: var(--blonde-coffee);
-  padding: 0 70px;
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 100px;
 }
 
@@ -105,6 +115,7 @@ p {
   max-height: 1000px;
 }
 
+/* from the team properties */
 #from_the_team {
   display: flex;
   align-items: center;
@@ -163,13 +174,34 @@ p {
   margin-left: calc(-1 * var(--default-font-size));
 }
 
+.next:hover{
+  color: var(--blonde-coffee);
+  transition: color 1s;
+}
+
 #team_text {
-  min-width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .contact_us {
   margin-bottom: 100px;
+}
+
+/* main page navigation bar properties */
+#mainPage_navigation {
+  background-color: var(--dark-coffee);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navButton {
+  text-decoration: none;
+  color: var(--blonde-coffee);
+  padding: 60px;
+  font-size: calc(1.3333 * var(--default-font-size));
 }
