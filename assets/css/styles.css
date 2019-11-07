@@ -7,6 +7,11 @@
   --default-font-size: 36px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--burnt-coffee);
   font-family: Verdana, Geneva, sans-serif;
@@ -25,10 +30,10 @@ h1 {
   font-size: 200%;
 }
 
-#feature_image {
+#logo_image {
   max-width: 70%;
 }
-#feature_image img {
+#logo_image img {
   width: 100%;
 }
 
@@ -60,5 +65,39 @@ h1 {
   font-size: calc(.7 * var(--default-font-size));
   background-color: transparent;
   color: var(--blonde-coffee);
-  margin: 15px;
+  margin: 15px 0 60px 0;
+}
+
+#java_features {
+  background-color: var(--dark-coffee);
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--light-coffee);
+  font-size: calc(2 * var(--default-font-size));
+  padding: 100px 70px;
+  text-align: center;
+}
+
+p {
+  font-size: var(--default-font-size);
+  color: var(--blonde-coffee);
+  padding: 0 70px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#features_content {
+  display: flex;
+}
+
+#features_image {
+  min-width: 50vw;
+  display: flex;
+  justify-content: flex;
+}
+
+#features_image img {
+  max-width: 100%;
 }
