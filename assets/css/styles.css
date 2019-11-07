@@ -30,12 +30,8 @@ body {
   align-items: center;
 }
 
-h1 {
-  font-size: 200%;
-}
-
 #logo_image {
-  max-width: 60%;
+  max-width: calc(20 * var(--default-font-size));
 }
 #logo_image img {
   width: 100%;
@@ -49,7 +45,7 @@ h1 {
 .button {
   border: none;
   border-radius: 100px;
-  padding: 40px 60px;
+  padding: calc(var(--default-font-size));
   text-decoration: none;
   font-size: var(--default-font-size);
   background-color: var(--medium-coffee);
@@ -73,7 +69,7 @@ h1 {
   font-size: calc(.7 * var(--default-font-size));
   background-color: transparent;
   color: var(--blonde-coffee);
-  margin: 15px 0 60px 0;
+  margin: 15px 0 calc(2 * var(--default-font-size)) 0;
 }
 
 /* java features properties*/
@@ -87,7 +83,7 @@ h2 {
   font-weight: bold;
   color: var(--light-coffee);
   font-size: calc(2 * var(--default-font-size));
-  padding: 100px 60px;
+  padding: calc(1.5 * var(--default-font-size)) 40px;
   text-align: center;
 }
 
@@ -96,7 +92,7 @@ p {
   color: var(--blonde-coffee);
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: calc(3 * var(--default-font-size));
 }
 
 #features_content {
@@ -112,7 +108,7 @@ p {
 #features_image img {
   object-fit: contain;
   width: 100%;
-  max-height: 1000px;
+  max-height: 65vw;
 }
 
 /* from the team properties */
@@ -195,7 +191,7 @@ p {
   background-color: var(--dark-coffee);
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
