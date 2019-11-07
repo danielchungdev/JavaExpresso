@@ -201,3 +201,13 @@ p {
   padding: calc(1.25 * var(--default-font-size));
   font-size: calc(1.3333 * var(--default-font-size));
 }
+
+/* START OF MEDIA QUERIES */
+/* START OF MEDIA QUERIES */
+/* START OF MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: lightgreen;
+  }
+}
