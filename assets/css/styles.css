@@ -183,7 +183,7 @@ p {
 }
 
 .contact_us {
-  margin-bottom: 100px;
+  margin-bottom: calc(2 * var(--default-font-size));
 }
 
 /* main page navigation bar properties */
@@ -198,6 +198,6 @@ p {
 .navButton {
   text-decoration: none;
   color: var(--blonde-coffee);
-  padding: 60px;
+  padding: calc(1.25 * var(--default-font-size));
   font-size: calc(1.3333 * var(--default-font-size));
 }
