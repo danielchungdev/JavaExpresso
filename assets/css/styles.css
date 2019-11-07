@@ -198,9 +198,47 @@ p {
 .navButton {
   text-decoration: none;
   color: var(--blonde-coffee);
-  padding: calc(1.25 * var(--default-font-size));
-  font-size: calc(1.3333 * var(--default-font-size));
+  margin: calc(1.25 * var(--default-font-size));
+  font-size: calc(1 * var(--default-font-size));
+  text-align: center;
 }
+
+#mobile_navigation {
+  position: fixed;
+  background-color: var(--dark-coffee);
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+
+#mobNav_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#topNav {
+  justify-content: flex-start;
+}
+
+#centerNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#bottomNav {
+  justify-content: flex-end;
+}
+
+.mobile_login {
+  background-color: var(--burnt-coffee);
+  padding-left: calc(2 * var(--default-font-size));
+  padding-right: calc(2 * var(--default-font-size));
+}
+
 
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
