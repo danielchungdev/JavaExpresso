@@ -1,0 +1,15 @@
+/* variable declarations */
+:root {
+  --burnt-coffee: #363636;
+  --dark-coffee: #66462f;
+  --medium-coffee: #98694f;
+  --light-coffee: #CA9E7B;
+  --blonde-coffee: #F5EDDA;
+  --default-font-size: 3vw;
+}
+div#page {
+    background-color: var(--burnt-coffee);
+}
+div#navbar {
+    background-color: var(--dark-coffee);
+}
