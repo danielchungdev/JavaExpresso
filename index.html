@@ -26,53 +26,57 @@
       </div>
 
       <!--[landing page on page load]-->
-      <div id="landing_page">
-        <div id="logo_image">
-            <img src="assets/images/feature_logo.png"/>
-          </div>
-          <div id="start">
-            <button class="button start_button">
-              Begin to Code
-            </button>
-            <button class="button ghost_button">
-              Already started? <span class="underline">Login</span>
-            </button>
-          </div>
+      <div class="modular_block">
+        <div id="landing_page">
+          <div id="logo_image">
+              <img src="assets/images/feature_logo.png"/>
+            </div>
+            <div id="start">
+              <button class="button start_button">
+                Begin to Code
+              </button>
+              <button class="button ghost_button">
+                Already started? <span class="underline">Login</span>
+              </button>
+            </div>
+        </div>
       </div>
 
       <!--[java features]-->
-      <div id="java_features">
-        <div id="features_content">
-          <div id="features_text">
-            <h2>Java Features</h2>
-            <p>
-              Java was designed to be simple to learn, understand, and write.
-              It's platform independent, meaning it can be run on just about
-              any and everything, making it the language of choice of both users
-              learning how to code and experienced developers in the field.
-            </p>
-            <p>
-              According to the <span class="underline">TIOBE Index</span>,
-              Java is the most widely used language since 2015.
-            </p>
-          </div>
-          <div id="features_image">
-            <img src="assets/images/white_mono.png"/>
-          </div>
+      <div class="modular_block">
+        <div id="java_features">
+            <div id="features_text">
+              <h2>Java Features</h2>
+              <p>
+                Java was designed to be simple to learn, understand, and write.
+                It's platform independent, meaning it can be run on just about
+                any and everything, making it the language of choice of both users
+                learning how to code and experienced developers in the field.
+              </p>
+              <p>
+                According to the <span class="underline">TIOBE Index</span>,
+                Java is the most widely used language since 2015.
+              </p>
+            </div>
+            <div id="features_image">
+              <img src="assets/images/white_mono.png"/>
+            </div>
         </div>
       </div>
 
       <!--[About Us]-->
-      <div id="from_the_team">
-        <div id="team_content">
+      <div class="modular_block">
+        <div id="from_the_team">
           <div id="slideshow_container">
+            <!--[Prev button]-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <div id="team_slideshow">
-               <div class="slides fade">
-                 <img src="assets/images/test_image_1.jpg"/>
-               </div>
-               <div class="slides fade heightFix">
-                 <img src="assets/images/test_image_2.jpg"/>
-               </div>
+              <div class="slides fade">
+                <img src="assets/images/test_image_1.jpg"/>
+              </div>
+              <div class="slides fade">
+                <img src="assets/images/test_image_2.jpg"/>
+              </div>
             </div>
             <!--[Next button]-->
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
