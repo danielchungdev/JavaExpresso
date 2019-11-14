@@ -248,6 +248,124 @@ p {
 }
 
 
+/* START OF LESSON CSS */
+/* START OF LESSON CSS */
+/* START OF LESSON CSS */
+
+/* wrapper for the body */
+div#page {
+    background-color: var(--burnt-coffee);
+    font-family: Verdana, sans-serif;
+    font-size: var(--default-font-size);
+    color: var(--blonde-coffee);
+    height: 100%;
+}
+
+/* navigaton */
+nav#navbar {
+    background-color: var(--dark-coffee);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+ul#navigation {
+    width: 70;
+    display: flex;
+}
+li {
+    list-style: none;
+    width: calc(3.5 * var(--default-font-size));
+    padding: 1.5vw;
+}
+a.navlink {
+    text-decoration: none;
+    color: var(--blonde-coffee);
+    font-size: calc(.75 * var(--default-font-size));
+    display: inline-block;
+}
+
+/* Jave Express-o logo (top-left) */
+img#icon {
+    width: calc(5 * var(--default-font-size));
+} 
+/* profile picture (top-right) */
+img#pfp {
+    width: calc(2.5 * var(--default-font-size));
+    display: inline-block;
+    margin-left: -4%;
+}
+/* crop the pfp into a circle */
+div#profile_cropper {
+    position: relative;
+    width: 7vw;
+    height: 7vw;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 1vw;
+}
+
+/* wrapper for the content of the lesson */
+div#content {
+    width: 70%;
+    margin: auto;
+}
+/* lesson header */
+h1.lesson_header {
+    color: var(--light-coffee);
+    font-weight: 100;
+    font-size: calc(2 * var(--default-font-size));
+    padding-top: calc(.75 * var(--default-font-size));
+}
+/* lesson title */
+h2.lesson_title {
+    font-weight: bold;
+    color: var(--light-coffee);
+    font-size: calc(.75 * var(--default-font-size));
+    padding: calc(.75 * var(--default-font-size));
+    padding-left: 0;
+    text-align: left;
+}
+p.lesson_content {
+    width: 100%;
+    margin-bottom: var(--default-font-size);
+    font-size: calc(.5 * var(--default-font-size));
+}
+
+/* wrapper for the quiz */
+div#quiz {
+    border: 3px var(--medium-coffee) solid;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 1vw;
+    margin-bottom: 3vw;
+    background-color: var(--burnt-coffee);
+    font-size: calc(.5 * var(--default-font-size));
+}
+/* quiz title */
+h2#quiz_title {
+    color: var(--light-coffee);
+    padding: calc(.25 * var(--default-font-size));
+    padding-left: 3vw;
+    text-align: left;
+    font-size: calc(.75 * var(--default-font-size));
+}
+/* class for each question */
+p.question {
+    padding: 1vw;
+    width: 100%;
+    margin: 0;
+}
+/* radio buttons */
+input.radio {
+    margin-left: 3vw;
+}
+/* labels on the radios */
+label.radio_label {
+    padding-left: 1vw
+}
+
+
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
