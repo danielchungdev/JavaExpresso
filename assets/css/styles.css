@@ -415,4 +415,36 @@ label.radio_label {
   #team_text {
     margin-top: calc(-3 * var(--default-font-size));
   }
+    
+    div#content {
+    width: 90%;
+  }
+
+  div#quiz {
+    width: 90%;
+  }
+
+  p.lesson_content {
+    font-size: var(--default-font-size);
+  }
+
+  h1.lesson_header {
+    font-size: calc(3 * var(--default-font-size));
+  }
+
+  h2.lesson_title {
+    font-size: calc(1.5 * var(--default-font-size));
+  }
+
+  h2#quiz_title {
+    font-size: calc(1.5 * var(--default-font-size));
+  }
+
+  p.question {
+    font-size: var(--default-font-size);
+  }
+
+  label.radio_label {
+    font-size: var(--default-font-size);
+  }
 }
