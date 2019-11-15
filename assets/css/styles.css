@@ -288,7 +288,7 @@ a.navlink {
 /* Jave Express-o logo (top-left) */
 img#icon {
     width: calc(5 * var(--default-font-size));
-} 
+}
 /* profile picture (top-right) */
 img#pfp {
     width: calc(2.5 * var(--default-font-size));
@@ -365,6 +365,10 @@ label.radio_label {
     padding-left: 1vw
 }
 
+.dog {
+    width: 50%;
+    height: 30%;
+}
 
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
@@ -379,10 +383,10 @@ label.radio_label {
   }
 
   #slideshow_container {
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-around;
   }
-  
+
   #team_slideshow {
     clip-path: circle(30vw at center);
   }
@@ -415,7 +419,7 @@ label.radio_label {
   #team_text {
     margin-top: calc(-3 * var(--default-font-size));
   }
-    
+
     div#content {
     width: 90%;
   }
