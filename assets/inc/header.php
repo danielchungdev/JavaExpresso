@@ -8,9 +8,3 @@
 </head>
 
 <body>
-	<div id="wrapper">
-		<h1>Corleone Pizzeria</h1>
-
-		<div id="featureimage">
-			<img alt="Image of a pizza pie" src="<?php echo $path;?>assets/img/pizza.jpg">
-		</div>
