@@ -1,7 +1,7 @@
 <!--[Pulls in the header part of the html from a php file]-->
 <?php
 	$path = './';
-	$page = 'JE - Lesson 1';
+	$page = 'Lesson 1';
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
 ?>
