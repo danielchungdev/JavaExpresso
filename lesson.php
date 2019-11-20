@@ -5,6 +5,7 @@
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
 ?>
+<!--[body tag is already open]-->
 
             <div id="content">
                 <h1 class="lesson_header">Lesson 1</h1>
