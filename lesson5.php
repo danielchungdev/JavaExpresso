@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Java Express-o</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    </head>
-    <body>
-        <div id="page">
-
-            <nav id="navbar">
-                <img id="icon" src="assets/images/white_horizontal.png" alt="Java Express-o" title="Java Express-o">
-                <ul id="navigation">
-                    <li><a class="navlink" href="#lesson1">Lesson 1</a></li>
-                    <li><a href="#lesson2" class="navlink">Lesson 2</a></li>
-                    <li><a href="#lesson3" class="navlink">Lesson 3</a></li>
-                    <li><a href="#lesson4" class="navlink">Lesson 4</a></li>
-                    <li><a href="#lesson5" class="navlink">Lesson 5</a></li>
-                </ul>
-                <div id="profile_cropper">
-                    <a href="#profile"><img id="pfp" src="assets/images/pfp.jpg" alt="Profile" title="Profile"></a>
-                </div>
-            </nav>
+<!--[Pulls in the header part of the html from a php file]-->
+<?php
+	$path = './';
+	$page = 'Lesson 5';
+	include $path.'assets/inc/header.php';
+	require $path.'../../../dbConnect.inc';
+?>
+<!--[body tag is already open]-->
 
             <div id="content">
                 <h1 class="lesson_header">Lesson 5</h1>
