@@ -2,8 +2,8 @@
 function post(){
         
       //var sName = document.forms["commentForm"]["Name"].value; 
-      //var sName = document.forms["commentForm"]["commentTa"].value; 
-      var sCom =  document.getElementsById("commentTa"); 
+      var sCom = document.forms["commentForm"]["commentTa"].value; 
+      //var sCom =  document.getElementsById("commentTa"); 
 
 
 
@@ -22,7 +22,7 @@ function post(){
        }
     else{
         console.log("isn't empty");
-        return false;
+        return true;
            
        }
      
