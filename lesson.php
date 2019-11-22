@@ -2,8 +2,26 @@
 <?php
 	$path = './';
 	$page = 'Lesson 1';
+    $quizDB = "l2Questions";
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
+
+    if ($mysqli) {
+        if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
+            //TODO check answers
+        }
+
+        $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
+        $res = $mysqli -> query($sql);
+        if ($res) {
+            while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+                $quiz[] = $rowHolder;
+            }
+        }
+    }
+
+    //TODO randomize questions
+
 ?>
 <!--[body tag is already open]-->
 
@@ -19,24 +37,27 @@
                 <!-- php include quiz-->
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson.php" onsubmit="return validate();" method="post">
-                    <p class="question" id="q1">This is a question on print statements?</p>
-                        <input class="radio" type="radio" name="a1" value="A" id="A1"><label class="radio_label" for="A1">Answer 1</label><br/>
-                        <input class="radio" type="radio" name="a1" value="B" id="B1"><label class="radio_label" for="B1">Answer 2</label><br/>
-                        <input class="radio" type="radio" name="a1" value="C" id="C1"><label class="radio_label" for="C1">Answer 3</label><br/>
-                        <input class="radio" type="radio" name="a1" value="D" id="D1"><label class="radio_label" for="D1">Answer 4</label><br/>
+                    <?php
                     
-                    <p class="question" id="q2">This is a question on print statements?</p>
-                        <input class="radio" type="radio" name="a2" value="A" id="A2"><label class="radio_label" for="A2">Answer 1</label><br/>
-                        <input class="radio" type="radio" name="a2" value="B" id="B2"><label class="radio_label" for="B2">Answer 2</label><br/>
-                        <input class="radio" type="radio" name="a2" value="C" id="C2"><label class="radio_label" for="C2">Answer 3</label><br/>
-                        <input class="radio" type="radio" name="a2" value="D" id="D2"><label class="radio_label" for="D2">Answer 4</label><br/>
+                    echo '<p class="question" id="q1">'.$quiz[0]["question"].'</p>
+                        <input class="radio" type="radio" name="a1" value="A" id="A1"><label class="radio_label" for="A1">'.$quiz[0]["c1"].'</label><br/>
+                        <input class="radio" type="radio" name="a1" value="B" id="B1"><label class="radio_label" for="B1">'.$quiz[0]["c2"].'</label><br/>
+                        <input class="radio" type="radio" name="a1" value="C" id="C1"><label class="radio_label" for="C1">'.$quiz[0]["c3"].'</label><br/>
+                        <input class="radio" type="radio" name="a1" value="D" id="D1"><label class="radio_label" for="D1">'.$quiz[0]["answer"].'</label><br/>';
                         
-                    <p class="question" id="q3">This is a question on print statements?</p>
-                        <input class="radio" type="radio" name="a3" value="A" id="A3"><label class="radio_label" for="A3">Answer 1</label><br/>
-                        <input class="radio" type="radio" name="a3" value="B" id="B3"><label class="radio_label" for="B3">Answer 2</label><br/>
-                        <input class="radio" type="radio" name="a3" value="C" id="C3"><label class="radio_label" for="C3">Answer 3</label><br/>
-                        <input class="radio" type="radio" name="a3" value="D" id="D3"><label class="radio_label" for="D3">Answer 4</label><br/>
+                    echo '<p class="question" id="q2">'.$quiz[1]["question"].'</p>
+                        <input class="radio" type="radio" name="a2" value="A" id="A2"><label class="radio_label" for="A2">'.$quiz[1]["c1"].'</label><br/>
+                        <input class="radio" type="radio" name="a2" value="B" id="B2"><label class="radio_label" for="B2">'.$quiz[1]["c2"].'</label><br/>
+                        <input class="radio" type="radio" name="a2" value="C" id="C2"><label class="radio_label" for="C2">'.$quiz[1]["c3"].'</label><br/>
+                        <input class="radio" type="radio" name="a2" value="D" id="D2"><label class="radio_label" for="D2">'.$quiz[1]["answer"].'</label><br/>';
+                    
+                    echo '<p class="question" id="q3">'.$quiz[2]["question"].'</p>
+                        <input class="radio" type="radio" name="a3" value="A" id="A3"><label class="radio_label" for="A3">'.$quiz[2]["c1"].'</label><br/>
+                        <input class="radio" type="radio" name="a3" value="B" id="B3"><label class="radio_label" for="B3">'.$quiz[2]["c2"].'</label><br/>
+                        <input class="radio" type="radio" name="a3" value="C" id="C3"><label class="radio_label" for="C3">'.$quiz[2]["c3"].'</label><br/>
+                        <input class="radio" type="radio" name="a3" value="D" id="D3"><label class="radio_label" for="D3">'.$quiz[2]["answer"].'</label><br/>';
                         
+                    ?>
                         <input id="submit" class="button" type="submit">
                 </form>
             </div>
