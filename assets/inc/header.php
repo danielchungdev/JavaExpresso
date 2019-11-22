@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title><?php echo $page;?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo $path;?>assets/css/styles.css"/>
-	<script src="<?php echo $path;?>assets/js/script.js"></script>
+	<script src="<?php echo $path;?>assets/js/quiz.js"></script>
 </head>
 	<body>
 	  <div id="page">

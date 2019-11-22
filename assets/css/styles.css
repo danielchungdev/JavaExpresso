@@ -373,6 +373,12 @@ input.radio {
 label.radio_label {
     padding-left: 1vw
 }
+/* submit button */
+input#submit{
+  padding: 1vw;
+  margin: 1vw;
+  font-size: calc(.5 * var(--default-font-size));
+}
 
 .dog {
     width: 50%;
@@ -460,4 +466,8 @@ label.radio_label {
   label.radio_label {
     font-size: var(--default-font-size);
   }
+
+    input#submit {
+        font-size: var(--default-font-size);
+    }
 }

@@ -18,12 +18,26 @@
             <div id="quiz">
                 <!-- php include quiz-->
                 <h2 id="quiz_title">Quiz</h2>
-                <form>
+                <form action="lesson.php" onsubmit="return validate();" method="post">
                     <p class="question" id="q1">This is a question on print statements?</p>
-                        <input class="radio" type="radio" name="a1" value="A" id="A"><label class="radio_label" for="A">Answer 1</label><br/>
-                        <input class="radio" type="radio" name="a1" value="B" id="B"><label class="radio_label" for="B">Answer 2</label><br/>
-                        <input class="radio" type="radio" name="a1" value="C" id="C"><label class="radio_label" for="C">Answer 3</label><br/>
-                        <input class="radio" type="radio" name="a1" value="D" id="D"><label class="radio_label" for="D">Answer 4</label><br/>
+                        <input class="radio" type="radio" name="a1" value="A" id="A1"><label class="radio_label" for="A1">Answer 1</label><br/>
+                        <input class="radio" type="radio" name="a1" value="B" id="B1"><label class="radio_label" for="B1">Answer 2</label><br/>
+                        <input class="radio" type="radio" name="a1" value="C" id="C1"><label class="radio_label" for="C1">Answer 3</label><br/>
+                        <input class="radio" type="radio" name="a1" value="D" id="D1"><label class="radio_label" for="D1">Answer 4</label><br/>
+                    
+                    <p class="question" id="q2">This is a question on print statements?</p>
+                        <input class="radio" type="radio" name="a2" value="A" id="A2"><label class="radio_label" for="A2">Answer 1</label><br/>
+                        <input class="radio" type="radio" name="a2" value="B" id="B2"><label class="radio_label" for="B2">Answer 2</label><br/>
+                        <input class="radio" type="radio" name="a2" value="C" id="C2"><label class="radio_label" for="C2">Answer 3</label><br/>
+                        <input class="radio" type="radio" name="a2" value="D" id="D2"><label class="radio_label" for="D2">Answer 4</label><br/>
+                        
+                    <p class="question" id="q3">This is a question on print statements?</p>
+                        <input class="radio" type="radio" name="a3" value="A" id="A3"><label class="radio_label" for="A3">Answer 1</label><br/>
+                        <input class="radio" type="radio" name="a3" value="B" id="B3"><label class="radio_label" for="B3">Answer 2</label><br/>
+                        <input class="radio" type="radio" name="a3" value="C" id="C3"><label class="radio_label" for="C3">Answer 3</label><br/>
+                        <input class="radio" type="radio" name="a3" value="D" id="D3"><label class="radio_label" for="D3">Answer 4</label><br/>
+                        
+                        <input id="submit" class="button" type="submit">
                 </form>
             </div>
 
