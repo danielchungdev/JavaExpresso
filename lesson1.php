@@ -3,6 +3,7 @@
 	$path = './';
 	$page = 'Lesson 1';
     $quizDB = "l1Questions";
+    $quizNum = "quiz1Score";
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
 
@@ -59,10 +60,15 @@
             </div>
 
             <div id="quiz">
-                <!-- php include quiz-->
+                <h2 id="quiz_title">Quiz</h2>
+                <form action="lesson4.php" onsubmit="return validate();" method="post">
                 <?php 
+                    if (isset($score)) {
+                    echo $score;
+                    }
                     include $path."assets/inc/quiz.php";
                 ?>
+                </form>
             </div>
 
         </div>
