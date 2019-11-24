@@ -2,8 +2,27 @@
 <?php
 	$path = './';
 	$page = 'Lesson 5';
+    $quizDB = "l5Questions";
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
+
+    if ($mysqli) {
+        if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
+            //TODO check answers
+        }
+
+        $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
+        $res = $mysqli -> query($sql);
+        if ($res) {
+            while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+                $quiz[] = $rowHolder;
+            }
+        }
+    }
+
+    //TODO randomize questions
+
+
 ?>
 <!--[body tag is already open]-->
 
@@ -38,14 +57,9 @@
 
             <div id="quiz">
                 <!-- php include quiz-->
-                <h2 id="quiz_title">Quiz</h2>
-                <form>
-                    <p class="question" id="q1">This is a question on print statements?</p>
-                        <input class="radio" type="radio" name="a1" value="A" id="A"><label class="radio_label" for="A">Answer 1</label><br/>
-                        <input class="radio" type="radio" name="a1" value="B" id="B"><label class="radio_label" for="B">Answer 2</label><br/>
-                        <input class="radio" type="radio" name="a1" value="C" id="C"><label class="radio_label" for="C">Answer 3</label><br/>
-                        <input class="radio" type="radio" name="a1" value="D" id="D"><label class="radio_label" for="D">Answer 4</label><br/>
-                </form>
+                <?php 
+                    include $path."assets/inc/quiz.php";
+                ?>
             </div>
 
         </div>

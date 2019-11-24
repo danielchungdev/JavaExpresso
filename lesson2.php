@@ -1,7 +1,7 @@
 <!--[Pulls in the header part of the html from a php file]-->
 <?php
 	$path = './';
-	$page = 'Lesson 1';
+	$page = 'Lesson 2';
     $quizDB = "l2Questions";
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
@@ -14,10 +14,24 @@
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
         $res = $mysqli -> query($sql);
         if ($res) {
-            while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+            while ($rowHolder = mysqli_fetch_array($res, MYSQLI_NUM)) {
                 $quiz[] = $rowHolder;
             }
         }
+        
+        $nums[0] = rand(0,5);
+        for($i = 1; $i < 3; $i++) {
+            $n = rand(0,5);
+            while (in_array($n, $nums)) {
+                $n = rand(0,5);
+            }
+            $nums[$i] = $n;
+        }
+        
+        foreach ($nums as $n) {
+            $questions[] = $quiz[$n];
+        }
+        
     }
 
     //TODO randomize questions
@@ -26,7 +40,7 @@
 <!--[body tag is already open]-->
 
             <div id="content">
-                <h1 class="lesson_header">Lesson 1</h1>
+                <h1 class="lesson_header">Lesson 2</h1>
                 <h2 class="lesson_title">Print Statements</h2>
                 <p class="lesson_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A cras semper auctor neque vitae tempus. Cursus turpis massa tincidunt dui ut ornare lectus sit. Id aliquet risus feugiat in. Nec feugiat in fermentum posuere urna. Sit amet consectetur adipiscing elit. Sapien eget mi proin sed libero enim sed faucibus. Orci ac auctor augue mauris augue neque. Egestas pretium aenean pharetra magna ac placerat. Cras tincidunt lobortis feugiat vivamus. Justo donec enim diam vulputate ut. Lacus vel facilisis volutpat est velit egestas. Gravida cum sociis natoque penatibus et magnis dis. Urna porttitor rhoncus dolor purus non enim praesent. Arcu dui vivamus arcu felis bibendum ut tristique et.</p>
 
@@ -35,31 +49,9 @@
 
             <div id="quiz">
                 <!-- php include quiz-->
-                <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson.php" onsubmit="return validate();" method="post">
-                    <?php
-                    
-                    echo '<p class="question" id="q1">'.$quiz[0]["question"].'</p>
-                        <input class="radio" type="radio" name="a1" value="A" id="A1"><label class="radio_label" for="A1">'.$quiz[0]["c1"].'</label><br/>
-                        <input class="radio" type="radio" name="a1" value="B" id="B1"><label class="radio_label" for="B1">'.$quiz[0]["c2"].'</label><br/>
-                        <input class="radio" type="radio" name="a1" value="C" id="C1"><label class="radio_label" for="C1">'.$quiz[0]["c3"].'</label><br/>
-                        <input class="radio" type="radio" name="a1" value="D" id="D1"><label class="radio_label" for="D1">'.$quiz[0]["answer"].'</label><br/>';
-                        
-                    echo '<p class="question" id="q2">'.$quiz[1]["question"].'</p>
-                        <input class="radio" type="radio" name="a2" value="A" id="A2"><label class="radio_label" for="A2">'.$quiz[1]["c1"].'</label><br/>
-                        <input class="radio" type="radio" name="a2" value="B" id="B2"><label class="radio_label" for="B2">'.$quiz[1]["c2"].'</label><br/>
-                        <input class="radio" type="radio" name="a2" value="C" id="C2"><label class="radio_label" for="C2">'.$quiz[1]["c3"].'</label><br/>
-                        <input class="radio" type="radio" name="a2" value="D" id="D2"><label class="radio_label" for="D2">'.$quiz[1]["answer"].'</label><br/>';
-                    
-                    echo '<p class="question" id="q3">'.$quiz[2]["question"].'</p>
-                        <input class="radio" type="radio" name="a3" value="A" id="A3"><label class="radio_label" for="A3">'.$quiz[2]["c1"].'</label><br/>
-                        <input class="radio" type="radio" name="a3" value="B" id="B3"><label class="radio_label" for="B3">'.$quiz[2]["c2"].'</label><br/>
-                        <input class="radio" type="radio" name="a3" value="C" id="C3"><label class="radio_label" for="C3">'.$quiz[2]["c3"].'</label><br/>
-                        <input class="radio" type="radio" name="a3" value="D" id="D3"><label class="radio_label" for="D3">'.$quiz[2]["answer"].'</label><br/>';
-                        
-                    ?>
-                        <input id="submit" class="button" type="submit">
-                </form>
+                <?php 
+                    include $path."assets/inc/quiz.php";
+                ?>
             </div>
 
         </div>
