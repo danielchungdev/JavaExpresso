@@ -3,12 +3,22 @@
 	$path = './';
 	$page = 'Lesson 4';
     $quizDB = "l4Questions";
+    $quizNum = "quiz4Score";
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
 
     if ($mysqli) {
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            //TODO check answers
+            
+            $score = 0;
+            foreach ($_POST as $response) {
+                if ($response == "correct") {
+                    $score++;
+                }
+            }
+            $score = ($score / 3) * 100;
+            
+            //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
         }
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
@@ -34,8 +44,6 @@
         
     }
 
-    //TODO randomize questions
-
 ?>
 <!--[body tag is already open]-->
 
@@ -48,10 +56,15 @@
             </div>
 
             <div id="quiz">
-                <!-- php include quiz-->
+                <h2 id="quiz_title">Quiz</h2>
+                <form action="lesson4.php" onsubmit="return validate();" method="post">
                 <?php 
+                    if (isset($score)) {
+                    echo $score;
+                    }
                     include $path."assets/inc/quiz.php";
                 ?>
+                </form>
             </div>
 
         </div>

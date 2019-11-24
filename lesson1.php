@@ -8,13 +8,26 @@
 
     if ($mysqli) {
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            //TODO check answers
+            
+            if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
+            
+            $score = 0;
+            foreach ($_POST as $response) {
+                if ($response == "correct") {
+                    $score++;
+                }
+            }
+            $score = ($score / 3) * 100;
+            
+            //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
+        }
+            
         }
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
         $res = $mysqli -> query($sql);
         if ($res) {
-            while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+            while ($rowHolder = mysqli_fetch_array($res, MYSQLI_NUM)) {
                 $quiz[] = $rowHolder;
             }
         }
@@ -33,9 +46,6 @@
         }
         
     }
-
-
-    //TODO randomize questions
 
 ?>
 <!--[body tag is already open]-->
