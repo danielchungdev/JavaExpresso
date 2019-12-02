@@ -56,9 +56,38 @@
             <div id="content">
                 <h1 class="lesson_header">Lesson 2</h1>
                 <h2 class="lesson_title">Print Statements</h2>
-                <p class="lesson_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A cras semper auctor neque vitae tempus. Cursus turpis massa tincidunt dui ut ornare lectus sit. Id aliquet risus feugiat in. Nec feugiat in fermentum posuere urna. Sit amet consectetur adipiscing elit. Sapien eget mi proin sed libero enim sed faucibus. Orci ac auctor augue mauris augue neque. Egestas pretium aenean pharetra magna ac placerat. Cras tincidunt lobortis feugiat vivamus. Justo donec enim diam vulputate ut. Lacus vel facilisis volutpat est velit egestas. Gravida cum sociis natoque penatibus et magnis dis. Urna porttitor rhoncus dolor purus non enim praesent. Arcu dui vivamus arcu felis bibendum ut tristique et.</p>
+                <p class="lesson_content">In Java, a print statement can be an incredibly valuable tool. First and foremost, print statements allow for the Java program to communicate with the user. A print statement can inform the user about the program’s purpose and processes, prompt the user to input data, and output data for the user to see or interact with. But print statements are not solely for the benefit of the user. Internally, print statements make a great asset for debugging. When incorporated into a program at frequent intervals, print statements can be used to report information about the program to the developer. For example, the developer can double check that the value of a variable is in fact the correct value. When used often, these print statements can be used to catch bugs quickly and pinpoint the exact moment when something has gone wrong.</p>
 
-                <p class="lesson_content">Interdum consectetur libero id faucibus nisl tincidunt eget nullam. Aliquet risus feugiat in ante metus dictum at. Semper auctor neque vitae tempus quam pellentesque nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam sollicitudin tempor id eu nisl nunc mi. Urna porttitor rhoncus dolor purus non enim praesent elementum facilisis. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. In ante metus dictum at tempor. Consequat semper viverra nam libero justo laoreet sit. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Consectetur a erat nam at lectus urna. Magnis dis parturient montes nascetur ridiculus mus. Vitae congue eu consequat ac felis donec et odio. Etiam erat velit scelerisque in. Neque convallis a cras semper auctor. Velit scelerisque in dictum non consectetur.</p>
+<p class="lesson_content">Print statements are written in the following formats:</p>
+
+	<p class="lesson_content">&nbsp;&nbsp;System.out.print(argument);<br/>
+	&nbsp;&nbsp;System.out.println(argument);</p>
+
+<p class="lesson_content">Where the argument is the String to be printed. When printing an existing variable, the name of the variable must be used as the argument. When printing static text, the text must be enclosed in either double or single quotation marks. The “println” statement concatenates a carriage return to the end of the argument, while the standard print statement outputs the String as is. For example:</p>
+	
+	<p class="lesson_content">&nbsp;&nbsp;System.out.print(“one”);<br/>
+&nbsp;&nbsp;System.out.print(“two”);<br/>
+&nbsp;&nbsp;System.out.print(“three”);<br/><br/>
+
+	&nbsp;&nbsp;-> onetwothree<br/><br/>
+
+	&nbsp;&nbsp;System.out.println(‘one’);<br/>
+	&nbsp;&nbsp;System.out.println(‘two’);<br/>
+	&nbsp;&nbsp;System.out.println(‘three’);<br/><br/>
+
+	&nbsp;&nbsp;-> one<br/>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two<br/>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three</p>
+
+<p class="lesson_content">Print statements can also print variables directly by automatically converting them into Strings, as well as perform concatenation within the argument itself:</p>
+
+	<p class="lesson_content">&nbsp;&nbsp;int x = 10;<br/>
+	&nbsp;&nbsp;String s = “hello world!”;<br/>
+	&nbsp;&nbsp;boolean b = true;<br/>
+	&nbsp;&nbsp;System.out.print(x + “ “ + s + “ “ + b);<br/><br/>
+
+	&nbsp;&nbsp;-> 10 hello world! true</p>
+
             </div>
 
             <div id="quiz">

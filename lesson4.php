@@ -49,10 +49,52 @@
 
             <div id="content">
                 <h1 class="lesson_header">Lesson 4</h1>
-                <h2 class="lesson_title">Iterations</h2>
-                <p class="lesson_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A cras semper auctor neque vitae tempus. Cursus turpis massa tincidunt dui ut ornare lectus sit. Id aliquet risus feugiat in. Nec feugiat in fermentum posuere urna. Sit amet consectetur adipiscing elit. Sapien eget mi proin sed libero enim sed faucibus. Orci ac auctor augue mauris augue neque. Egestas pretium aenean pharetra magna ac placerat. Cras tincidunt lobortis feugiat vivamus. Justo donec enim diam vulputate ut. Lacus vel facilisis volutpat est velit egestas. Gravida cum sociis natoque penatibus et magnis dis. Urna porttitor rhoncus dolor purus non enim praesent. Arcu dui vivamus arcu felis bibendum ut tristique et.</p>
+                <h2 class="lesson_title">Loops</h2>
+                <p class="lesson_content">In Java there are three basic types of loops: for-loop, while loop, and do-while loop. The way these work are simple; they have a condition that stops them and code that is implemented until that condition is met or until the condition stops being true.</p>
 
-                <p class="lesson_content">Interdum consectetur libero id faucibus nisl tincidunt eget nullam. Aliquet risus feugiat in ante metus dictum at. Semper auctor neque vitae tempus quam pellentesque nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam sollicitudin tempor id eu nisl nunc mi. Urna porttitor rhoncus dolor purus non enim praesent elementum facilisis. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. In ante metus dictum at tempor. Consequat semper viverra nam libero justo laoreet sit. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Consectetur a erat nam at lectus urna. Magnis dis parturient montes nascetur ridiculus mus. Vitae congue eu consequat ac felis donec et odio. Etiam erat velit scelerisque in. Neque convallis a cras semper auctor. Velit scelerisque in dictum non consectetur.</p>
+
+<h2 class="lesson_title">For-loop:</h2>
+<p class="lesson_content">For-loop conditions are based around a number that either increments or decrements every time the code inside the for-loop is run.</p>
+
+<p class="lesson_content">Code:<br/>
+&nbsp;for(int i = 0; i &lt; 4; i++){<br/>
+	&nbsp;&nbsp;System.out.println(“i is equal to “ + i);<br/>
+&nbsp;}</p>
+
+<p class="lesson_content">Output:<br/>
+&nbsp;i is equal to 0<br/>
+&nbsp;i is equal to 1<br/>
+&nbsp;i is equal to 2<br/>
+&nbsp;i is equal to 3</p>
+
+<h2 class="lesson_title">While-loop:</h2>
+<p class="lesson_content">While loops work by running the code inside of it until the condition set stops being true.</p>
+
+<p class="lesson_content">Code:<br/>
+&nbsp;String example = “”;<br/><br/>
+
+&nbsp;while(example.length() &lt; 4){<br/>
+	&nbsp;&nbsp;example += “A”;<br/>
+&nbsp;&nbsp;System.out.println(example);<br/>
+&nbsp;}</p>
+
+<p class="lesson_content">Output:<br/>
+&nbsp;A<br/>
+&nbsp;AA<br/>
+&nbsp;AAA</p>
+
+<h2 class="lesson_title">Do-while:</h2>
+<p class="lesson_content">Do-while loops work by running the code inside of it at least once, and then stopping once the conditions in the while are no longer true.</p>
+
+<p class="lesson_content">Code:<br/>
+&nbsp;int i = 0;<br/>
+&nbsp;do{<br/>
+	&nbsp;&nbsp;System.out.println(“i is equal to “ + i);<br/>
+&nbsp;}while(i > 1);</p>
+
+<p class="lesson_content">Output:<br/>
+&nbsp;i is equal to 0</p>
+
             </div>
 
             <div id="quiz">
