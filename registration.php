@@ -13,10 +13,11 @@
         $stmt->bind_param("ss",$email, password_hash($_POST['r_psw'], PASSWORD_DEFAULT));
 		$stmt->execute();
 		$stmt->close();
+        header('Location: login.php');
       }catch(Exception $e){
           if($mysqli->errno === 1062) echo 'Duplicate entry';
       }
-        header('Location: login.php');
+       
     }
     function passCheck(){
 		if(strcmp($_POST['r_psw'],$_POST['r_pswR'])==0){
@@ -77,7 +78,7 @@
         
         <br>
         <br>
-        <p>Already have an account? <a style="color:#F5EDDA; " href="#">Sign in</a>.</p>
+        <p>Already have an account? <a style="color:#F5EDDA; " href="login.php">Sign in</a>.</p>
 
      </form>
     </div>
