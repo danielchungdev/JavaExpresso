@@ -9,9 +9,7 @@
 
     if ($mysqli) {
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            
-            if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            
+
             $score = 0;
             foreach ($_POST as $response) {
                 if ($response == "correct") {
@@ -19,10 +17,9 @@
                 }
             }
             $score = ($score / 3) * 100;
-            
+
             //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
-        }
-            
+
         }
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
@@ -32,7 +29,7 @@
                 $quiz[] = $rowHolder;
             }
         }
-        
+
         $nums[0] = rand(0,5);
         for($i = 1; $i < 3; $i++) {
             $n = rand(0,5);
@@ -41,11 +38,11 @@
             }
             $nums[$i] = $n;
         }
-        
+
         foreach ($nums as $n) {
             $questions[] = $quiz[$n];
         }
-        
+
     }
 
     //TODO randomize questions
@@ -64,7 +61,7 @@
 	&nbsp;&nbsp;System.out.println(argument);</p>
 
 <p class="lesson_content">Where the argument is the String to be printed. When printing an existing variable, the name of the variable must be used as the argument. When printing static text, the text must be enclosed in either double or single quotation marks. The “println” statement concatenates a carriage return to the end of the argument, while the standard print statement outputs the String as is. For example:</p>
-	
+
 	<p class="lesson_content">&nbsp;&nbsp;System.out.print(“one”);<br/>
 &nbsp;&nbsp;System.out.print(“two”);<br/>
 &nbsp;&nbsp;System.out.print(“three”);<br/><br/>
@@ -92,8 +89,8 @@
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson4.php" onsubmit="return validate();" method="post">
-                <?php 
+                <form action="lesson2.php" onsubmit="return validate();" method="post">
+                <?php
                     if (isset($score)) {
                     echo $score;
                     }

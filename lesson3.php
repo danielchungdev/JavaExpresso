@@ -9,9 +9,7 @@
 
     if ($mysqli) {
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            
-            if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            
+
             $score = 0;
             foreach ($_POST as $response) {
                 if ($response == "correct") {
@@ -19,10 +17,9 @@
                 }
             }
             $score = ($score / 3) * 100;
-            
+
             //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
-        }
-            
+
         }
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
@@ -32,7 +29,7 @@
                 $quiz[] = $rowHolder;
             }
         }
-        
+
         $nums[0] = rand(0,5);
         for($i = 1; $i < 3; $i++) {
             $n = rand(0,5);
@@ -41,11 +38,11 @@
             }
             $nums[$i] = $n;
         }
-        
+
         foreach ($nums as $n) {
             $questions[] = $quiz[$n];
         }
-        
+
     }
 
 ?>
@@ -61,8 +58,8 @@
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson4.php" onsubmit="return validate();" method="post">
-                <?php 
+                <form action="lesson3.php" onsubmit="return validate();" method="post">
+                <?php
                     if (isset($score)) {
                     echo $score;
                     }

@@ -188,7 +188,7 @@ To store a single character, use char.</p>
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson4.php" onsubmit="return validate();" method="post">
+                <form action="lesson1.php" onsubmit="return validate();" method="post">
                 <?php
                     if (isset($score)) {
                     echo $score;
