@@ -12,16 +12,17 @@
             
             if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
             
-            $score = 0;
-            foreach ($_POST as $response) {
-                if ($response == "correct") {
-                    $score++;
+                $score = 0;
+                foreach ($_POST as $response) {
+                    if ($response == "correct") {
+                        $score++;
+                    }
                 }
-            }
-            $score = ($score / 3) * 100;
+                $score = ($score / 3) * 100;
             
-            //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
-        }
+                $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
+                $mysqli -> query($sql);
+            }
             
         }
 
@@ -190,7 +191,7 @@ To store a single character, use char.</p>
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson4.php" onsubmit="return validate();" method="post">
+                <form action="lesson1.php" onsubmit="return validate();" method="post">
                 <?php 
                     if (isset($score)) {
                     echo $score;

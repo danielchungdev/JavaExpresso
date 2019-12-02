@@ -20,7 +20,8 @@
             }
             $score = ($score / 3) * 100;
             
-            //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
+            $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
+                $mysqli -> query($sql);
         }
             
         }
@@ -54,14 +55,41 @@
             <div id="content">
                 <h1 class="lesson_header">Lesson 3</h1>
                 <h2 class="lesson_title">Methods</h2>
-                <p class="lesson_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A cras semper auctor neque vitae tempus. Cursus turpis massa tincidunt dui ut ornare lectus sit. Id aliquet risus feugiat in. Nec feugiat in fermentum posuere urna. Sit amet consectetur adipiscing elit. Sapien eget mi proin sed libero enim sed faucibus. Orci ac auctor augue mauris augue neque. Egestas pretium aenean pharetra magna ac placerat. Cras tincidunt lobortis feugiat vivamus. Justo donec enim diam vulputate ut. Lacus vel facilisis volutpat est velit egestas. Gravida cum sociis natoque penatibus et magnis dis. Urna porttitor rhoncus dolor purus non enim praesent. Arcu dui vivamus arcu felis bibendum ut tristique et.</p>
+                <p class="lesson_content">Methods are  functions if you have ever used another coding language. Methods are a block of code which is meant to run and provide a certain output. The output can vary depending on the return type.</p>
 
-                <p class="lesson_content">Interdum consectetur libero id faucibus nisl tincidunt eget nullam. Aliquet risus feugiat in ante metus dictum at. Semper auctor neque vitae tempus quam pellentesque nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam sollicitudin tempor id eu nisl nunc mi. Urna porttitor rhoncus dolor purus non enim praesent elementum facilisis. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. In ante metus dictum at tempor. Consequat semper viverra nam libero justo laoreet sit. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Consectetur a erat nam at lectus urna. Magnis dis parturient montes nascetur ridiculus mus. Vitae congue eu consequat ac felis donec et odio. Etiam erat velit scelerisque in. Neque convallis a cras semper auctor. Velit scelerisque in dictum non consectetur.</p>
+
+<p class="lesson_content">Example:<br/><br/>
+public static void main(String[] args) {<br/>
+	System.out.println(count()+””);<br/>
+}<br/>
+public int count(){<br/>
+	int index =1;<br/>
+	return index;<br/>
+}<br/><br/>
+Output: 1</p>
+
+<p class="lesson_content">Methods can also take in arguments and then execute some action whether that be checking for a value or modifying the argument. Methods can be executed more than once so if needed you can use methods to validate or modify the data repeatedly.</p>
+
+<p class="lesson_content">Example:<br/><br/>
+public static void main(String[] args) {<br/>
+	int index=1;<br/>
+	index=count(index);<br/>
+	System.out.println(index);<br/>
+}<br/>
+public int count(int i){<br/>
+	i=i++;<br/>
+}<br/><br/>
+Output:2</p>
+
+<p class="lesson_content">When creating a java file you are required to make a main method. This method can take in arguments from the command line. The main method is denoted like this:<br/><br/>
+
+public static void main(String[] args) { }</p>
+
             </div>
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson4.php" onsubmit="return validate();" method="post">
+                <form action="lesson3.php" onsubmit="return validate();" method="post">
                 <?php 
                     if (isset($score)) {
                     echo $score;

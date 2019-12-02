@@ -20,7 +20,9 @@
             }
             $score = ($score / 3) * 100;
             
-            //$sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail='**********SESSION userEmail****************'";
+                var_dump($_SESSION);
+            $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
+                $mysqli -> query($sql);
         }
             
         }
@@ -92,7 +94,7 @@
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
-                <form action="lesson4.php" onsubmit="return validate();" method="post">
+                <form action="lesson2.php" onsubmit="return validate();" method="post">
                 <?php 
                     if (isset($score)) {
                     echo $score;
