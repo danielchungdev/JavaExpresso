@@ -340,13 +340,6 @@ p.lesson_content {
     margin-bottom: var(--default-font-size);
     font-size: calc(.5 * var(--default-font-size));
 }
-span.bold {
-    font-weight: 600;
-}
-li.content_list {
-    width: 100%;
-    font-size: calc(.5 * var(--default-font-size));
-}
 
 /* wrapper for the quiz */
 div#quiz {
@@ -390,6 +383,12 @@ input#submit{
 .dog {
     width: 50%;
     height: 30%;
+}
+
+
+/* container for login/registration */
+div.container {
+  width: 40vw;
 }
 
 /* START OF MEDIA QUERIES */
@@ -453,10 +452,6 @@ input#submit{
   p.lesson_content {
     font-size: var(--default-font-size);
   }
-    
-    li.content_list {
-        font-size: var(--default-font-size);
-    }
 
   h1.lesson_header {
     font-size: calc(3 * var(--default-font-size));
