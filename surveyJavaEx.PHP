@@ -1,7 +1,7 @@
 
 <?php
     $path ='./';
-    require $path.'./../../../../dbConnect.inc';
+    require $path.'./../../../dbConnect.inc';
     // echo 'asdfjajsdfkjasdfh';
     // echo $_GET['lesson'];
     // echo $_GET['email'];
@@ -11,8 +11,8 @@
 
  
 
-    if(!empty($_POST['lesson']) && !empty($_POST['email']) && !empty($_POST['comments']) && !empty($_POST['experience']) && !empty($_POST['satisfaction'])){
-           foreach($_POST['Lesson'] as $lessonList){
+    if(!empty($_POST['lesson[]']) && !empty($_POST['email']) && !empty($_POST['comments']) && !empty($_POST['experience']) && !empty($_POST['satisfaction'])){
+           foreach($_POST['lesson'] as $lessonList){
         $lesson .= $lessonList;
     }
         //$lesson = $_POST['lesson'];
@@ -25,7 +25,7 @@
         
         $email_subject = "Java Express-O Survey Feedback";
         $email_body = "Email: $email\n";
-        $email_body .= "Lessons: $lesson\n";
+        $email_body .= "Lessons Taken: $lesson\n";
         $email_body .= "Experience: $experience\n";
         $email_body .= "Satisfaction: $satisfaction\n";
         $email_body .= "Comments: $comments\n";
@@ -43,6 +43,7 @@
                     for($i = 0; $i <= 5;$i++){
                         mail($this_row[$i]['email'], $email_subject,$email_body);
                     }
+                    
                 }
             }
         }
@@ -64,8 +65,11 @@
     
 <script>
     function validate(){
-        if(boxesChecked() == false || textFilled() == false){
+       if(boxesChecked() == false || textFilled() == false){
+
+            console.log("hi");
             return false;
+            
         }
         else{
             return true;
@@ -73,7 +77,7 @@
     }
     
     function boxesChecked(){
-        var numBox = document.getElementsByName("lesson").length;
+        var numBox = document.getElementsByName("lesson[]").length;
         if(numBox <= 0 ){
             return false;
         }
@@ -128,7 +132,8 @@
       <br>
       <input type = "text" name = "satisfaction" value = "">
       <br>
-    <input type="submit" name="submit"></input>
+    <input type="submit" name="submit">
+    
 </form>
  
  </body>
