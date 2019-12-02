@@ -19,7 +19,7 @@
             $_SESSION['login']=true;
             $_SESSION['email']=$email;
                 session_name($_POST['email'].'s');
-			header('Location: survey.php');
+			header('Location: index.html');
         }
         else{
             
@@ -57,6 +57,10 @@
                 <br>
                 <br>
                 <input type="submit" name="Submit"/>
+                <br>
+                <br>
+                <p>Need an account? <a style="color:#F5EDDA; " href="registration.php">Register</a>.</p>
+                
             </form>
         </div>
         
