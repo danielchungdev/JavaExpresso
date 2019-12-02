@@ -2,14 +2,14 @@
     session_start();
 
     $path = './';
-    require $path.'../../dbConnect.inc';
-    
+    require $path.'../../../dbConnect.inc';
+
 
     if(!empty($_POST['email']) && !empty($_POST['psw']) ){
         $email=$_POST['email'];
-         
+
         $pass=$_POST['psw'];
-        
+
         $stmt=$mysqli->prepare("SELECT password FROM accountDb WHERE userEmail=?");
         $stmt->bind_param("s",$email);
         $stmt->execute();
@@ -22,19 +22,19 @@
 			header('Location: index.html');
         }
         else{
-            
-                
+
+
         }
        $stmt->close();
     }
 
-    session_destroy(); 
-         
-     
+    session_destroy();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,9 +60,9 @@
                 <br>
                 <br>
                 <p>Need an account? <a style="color:#F5EDDA; " href="registration.php">Register</a>.</p>
-                
+
             </form>
         </div>
-        
+
     </body>
 </html>
