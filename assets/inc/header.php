@@ -21,6 +21,6 @@
 	          <li><a href="lesson5.php" class="navlink">Lesson 5</a></li>
 	      </ul>
         <div id="profile_cropper">
-        	<a href="#profile"><img id="pfp" src="assets/images/pfp.jpg" alt="Profile" title="Profile"></a>
+        	<a href="registration.php"><img id="pfp" src="assets/images/pfp.jpg" alt="Profile" title="Profile"></a>
         </div>
     	</nav>
