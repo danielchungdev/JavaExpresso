@@ -385,6 +385,12 @@ input#submit{
     height: 30%;
 }
 
+
+/* container for login/registration */
+div.container {
+  width: 40vw;
+}
+
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
