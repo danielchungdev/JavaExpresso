@@ -284,9 +284,14 @@ ul#navigation {
 }
 li {
     list-style: none;
-    width: calc(3.5 * var(--default-font-size));
+    /*width: calc(3.5 * var(--default-font-size));*/
     padding: 1.5vw;
 }
+
+.content_list {
+  font-size: calc(.5 * var(--default-font-size));
+}
+
 a.navlink {
     text-decoration: none;
     color: var(--blonde-coffee);
