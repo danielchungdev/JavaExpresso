@@ -39,23 +39,22 @@
     <script src="asset/js/survey.js"></script>
 </head>
 <body>
-
-
-
-	<h1>Please Give Us Your Feedback</h1>
+<div class="loginAndRegistration">
+   <div class="container" style="text-align: left; width: 70%; margin: 0 auto;">
+      <h1>Please Give Us Your Feedback</h1>
 	   <form id="cForm" name="commentForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return post();">
         <h2>Please Enter Your Name</h2>
             <input id="nameIn" type="text" name="name"/>
 
             <br>
             <h2>We would Love To Know What You Thought</h2>
-<!--            <input id="commemt"  type="text" name="comment"/>-->
+            <!--            <input id="commemt"  type="text" name="comment"/>-->
 
             <input id="commentTa" type="text" name="comment" />
-<!--            <textarea rows="5"  cols="50" form="commentForm" id="commentTa" value="com" name="comment"></textarea>-->
+            <!--            <textarea rows="5"  cols="50" form="commentForm" id="commentTa" value="com" name="comment"></textarea>-->
             <br>
             <br>
-<!--            <input id="sub" type="button" value="Submit"/>-->
+            <!--            <input id="sub" type="button" value="Submit"/>-->
              <input id="sub" type="submit" value="Submit"/>
             <h2>Comments</h2>
             <div class="commentsDiv">
@@ -68,9 +67,11 @@
                     //echo '</ul>';
                     }
 
-                        ?>
+            ?>
            </div>
         </form>
+      </div>
+     </div>
 		<?php include("assets/inc/footer.php"); ?>
     </body>
 </html>
