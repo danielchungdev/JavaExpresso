@@ -539,3 +539,8 @@ input#submit{
 #footer {
   font-size: calc(.25 * var(--default-font-size));
 }
+
+#score_table {
+  margin: 0 auto;
+  column-gap: 3em;
+}
