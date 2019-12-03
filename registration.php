@@ -55,8 +55,6 @@
             <img src="assets/images/feature_logo.png"/>
           </div>
           <div class="container">
-              <h2>Register</h2>
-
               <form name="regForm" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" onsubmit="return regVal()" >
 
                   <label for="email"><b>Email</b></label><br />

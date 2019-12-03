@@ -17,11 +17,12 @@
                 }
             }
             $score = ($score / 3) * 100;
-            
+
             $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
                 $mysqli -> query($sql);
         
             
+
         }
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
@@ -88,7 +89,7 @@ public static void main(String[] args) { }</p>
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson3.php" onsubmit="return validate();" method="post">
-                <?php 
+                <?php
                     if (isset($score)) {
                     echo $score;
                     }
