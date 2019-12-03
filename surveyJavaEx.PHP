@@ -126,7 +126,7 @@
                     <input type="checkbox" name="lesson[]" value="Variables "> Variables </input>
 
                     <br>
-                    
+
                 </fieldset>
                 <br><br><br>
 
@@ -146,6 +146,10 @@
               <br>
 
               <input type="submit" name="submit">
+
+              <br>
+              <br>
+              <br>
         </form>
      </div>
  </body>
