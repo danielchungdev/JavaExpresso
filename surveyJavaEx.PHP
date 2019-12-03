@@ -105,11 +105,11 @@
          <h2>Survey</h2>
           <form name="survey" onsubmit="return validate()" action = "<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                 <label for="email"><b>Enter your email</b></label><br />
-                <input type="text" id="name" name="email" placeholder="email"><br />
+                <input type="text" id="name" name="email" placeholder="email"><br /><br>
 
                 <label for="experience"><b>What is your level of experience?:</b></label><br />
                 <input type="text" name="experience" placeholder="level of experience">
-                <br><br>
+                <br><br><br><br>
 
 
                 <fieldset>
@@ -117,17 +117,22 @@
                     <legend style="color:var(--light-coffee);">
                         <b>What Lessons Did You Take?</b>
                     </legend>
+                    <br>
 
                     <input type="checkbox" name="lesson[]" value="Loops "> Loops </input>
                     <input type="checkbox" name="lesson[]" value="Objects "> Objects </input>
                     <input type="checkbox" name="lesson[]" value="Prints "> Print Statements </input>
                     <input type="checkbox" name="lesson[]" value="Methods "> Methods </input>
                     <input type="checkbox" name="lesson[]" value="Variables "> Variables </input>
+
+                    <br>
+                    
                 </fieldset>
-                <br>
+                <br><br><br>
 
                 <label for="comment"><b>Anything else you want to tell us?</b></label><br />
                 <input type="text" id="comment" name="comment" placeholder="thoughts"><br />
+                <br><br>
 
               <label for="rating"><b>Please rate your satisfaction from 1-10 :</b></label><br />
               <input type="radio" name="rating" value="1"> 1
@@ -139,7 +144,7 @@
               <br>
               <br>
               <br>
-              
+
               <input type="submit" name="submit">
         </form>
      </div>
