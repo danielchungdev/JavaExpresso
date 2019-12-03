@@ -7,7 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $path;?>assets/css/styles.css"/>
 	<script src="<?php echo $path;?>assets/js/quiz.js"></script>
     <?php 
-        session_start();
+        if (!isset($_SESSION)) {
+            header("Location: login.php");
+            exit();
+        }
     ?>
 </head>
 	<body>
