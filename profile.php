@@ -11,10 +11,11 @@
         }
 
     if ($mysqli) {
-        
+        var_dump($_SESSION);
         $email = $_SESSION['email'];
         $sql = "SELECT quiz1Score, quiz2Score, quiz3Score, quiz4Score, quiz5Score FROM accountDb where userEmail = $email";
         $res = $mysqli -> query($sql);
+        
         var_dump($res);
         if ($res) {
             while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
