@@ -1,13 +1,14 @@
 <!--[Pulls in the header part of the html from a php file]-->
 <?php
     $path = './';
-    $page = 'Lesson 1';
+    $page = 'Profile';
     include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
-
-    if (!isset($_SESSION)) {
-        session_start();
-    }
+    
+    if ($_SESSION['login'] != true) {
+            header("Location: login.php");
+            exit();
+        }
 
     if ($mysqli) {
         
