@@ -43,7 +43,7 @@
 
             if(isset($_SESSION['email'])) {
             $email = $_SESSION['email'];
-                    $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = $email";
+                    $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = '$email'";
                     $mysqli -> query($sql);
             }
 
