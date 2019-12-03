@@ -535,3 +535,7 @@ input#submit{
 .flex-container-table th, .flex-container-table td {
   font-size: calc(.5 * var(--default-font-size));
 }
+
+#footer {
+  font-size: calc(.25 * var(--default-font-size));
+}

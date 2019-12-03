@@ -70,8 +70,9 @@
             ?>
            </div>
         </form>
+        <?php include("assets/inc/footer.php"); ?>
       </div>
      </div>
-		<?php include("assets/inc/footer.php"); ?>
+
     </body>
 </html>
