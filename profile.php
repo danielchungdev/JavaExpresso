@@ -9,28 +9,27 @@
             header("Location: login.php");
             exit();
         }
+    echo "<div id='profile_wrapper'>";
 
     if ($mysqli) {
-        var_dump($_SESSION);
         $email = $_SESSION['email'];
-        $sql = "SELECT quiz1Score, quiz2Score, quiz3Score, quiz4Score, quiz5Score FROM accountDb where userEmail = $email";
+        $sql = "SELECT quiz1Score, quiz2Score, quiz3Score, quiz4Score, quiz5Score FROM accountDb where userEmail = '$email'";
         $res = $mysqli -> query($sql);
         
-        var_dump($res);
         if ($res) {
             while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
                 $scores[] = $rowHolder;
             }
-            var_dump($scores);
+            
             echo '<table id="score_table">
                     <tr>
                         <th>Quiz Number</th>
                         <th>Quiz Score</th>
                     </tr>';
-            for ($i = 1; $i <= count($scores); $i++) {
+            for ($i = 1; $i <= 5; $i++) {
                 echo '<tr>
                         <td>'.$i.'</td>
-                        <td>'.$scores["quiz".$i."Score"].'</td>
+                        <td>'.$scores[0]["quiz".$i."Score"].'</td>
                         </tr>';
             }
             echo '</table>';
@@ -38,6 +37,7 @@
         }
         
     }
+    echo "</div>";
 ?>
 </body>
 </html>
