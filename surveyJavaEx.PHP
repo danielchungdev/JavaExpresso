@@ -134,7 +134,7 @@
                 <input type="text" id="comment" name="comment" placeholder="thoughts"><br />
                 <br><br>
 
-              <label for="rating"><b>Please rate your satisfaction from 1-10 :</b></label><br />
+              <label for="rating"><b>Please rate your satisfaction from 1-5 :</b></label><br />
               <input type="radio" name="rating" value="1"> 1
               <input type="radio" name="rating" value="2"> 2
               <input type="radio" name="rating" value="3"> 3
