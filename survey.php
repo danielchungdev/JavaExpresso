@@ -61,7 +61,7 @@
            			if (mysqli_num_rows($res) > 0) {
 			     //echo "<ul>";
 		         foreach(array_reverse($records) as $this_row){
-			  echo "<li style='font-size:16px; color:#F5EDDA; list-style-type: none;'>".$this_row['name'] . ": " . $this_row['comment']."</li><br>";
+			  echo "<li style='font-size:16px; color:#F5EDDA; list-style-type: none;'>".$this_row['name'] . " : " . $this_row['comment']."</li><br>";
 			}
                     //echo '</ul>';
                     }

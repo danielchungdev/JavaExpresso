@@ -394,7 +394,7 @@ input#submit{
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
 
   #from_the_team {
     flex-direction: column;
