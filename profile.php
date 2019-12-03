@@ -12,13 +12,15 @@
 
     if ($mysqli) {
         
-        $sql = "SELECT quiz1Score, quiz2Score, quiz3Score, quiz4Score, quiz5Score FROM accountDb where userEmail = ".$_SESSION['email'];
+        $email = $_SESSION['email'];
+        $sql = "SELECT quiz1Score, quiz2Score, quiz3Score, quiz4Score, quiz5Score FROM accountDb where userEmail = $email";
         $res = $mysqli -> query($sql);
+        var_dump($res);
         if ($res) {
             while ($rowHolder = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
                 $scores[] = $rowHolder;
             }
-            
+            var_dump($scores);
             echo '<table id="score_table">
                     <tr>
                         <th>Quiz Number</th>
