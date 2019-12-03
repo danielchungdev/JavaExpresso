@@ -20,7 +20,7 @@
             
             $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
                 $mysqli -> query($sql);
-        }
+        
             
         }
 
@@ -47,7 +47,6 @@
 
     }
 
-    //TODO randomize questions
 
 ?>
 <!--[body tag is already open]-->

@@ -10,7 +10,6 @@
     if ($mysqli) {
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
             
-            if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
             
                 $score = 0;
                 foreach ($_POST as $response) {
@@ -22,7 +21,6 @@
             
                 $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
                 $mysqli -> query($sql);
-            }
             
         }
 
