@@ -81,6 +81,15 @@
                     This is how you create a new object.
                 </p>
                 <img class="dog" src="assets/images/lesson5/creating.png" alt="creating">
+                <p class="lesson_content">
+                    Now in lesson 3 we learned about methods, you can create methods inside the class. So for example let's create a method in dogs that says bark.
+                </p>
+                <img src="assets/images/lesson5/methods.JPG" alt="Creating a method">
+                <p>Now everytime that this method is called the dog will bark. The way that you call methods is by .notation and you can only call public 
+                methods inside of the class.</p>
+                <img src="assets/images/lesson5/howtocall.jpg" alt="how to call">
+                <img src="assets/images/lesson5/result.jpg" alt="results">
+                
             </div>
 
             <div id="quiz">
