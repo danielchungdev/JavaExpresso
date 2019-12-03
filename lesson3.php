@@ -90,9 +90,7 @@ public static void main(String[] args) { }</p>
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson3.php" onsubmit="return validate();" method="post">
                 <?php
-                    if (isset($score)) {
-                    echo $score;
-                    }
+                    
                     include $path."assets/inc/quiz.php";
                 ?>
                 </form>

@@ -15,17 +15,22 @@
                 }
         
                 foreach ($nums as $n) {
+                    if ($n == 3) {
+                        $correct[] = "correct";
+                    } else {
+                        $correct[] = "incorrect";
+                    }
                     $answers[] = $questions[$i][($n + 1)];
                 }
                 
                 echo '<p class="question" id="q'.$i.'">'.$questions[$i][0].'</p>
-                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$answers[0].' id="A'.$i.'"><label class="radio_label" for="A'.$i.'">'.$answers[0].'</label><br/>
+                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$correct[0].' id="A'.$i.'"><label class="radio_label" for="A'.$i.'">'.$answers[0].'</label><br/>
                         
-                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$answers[1].' id="B'.$i.'"><label class="radio_label" for="B'.$i.'">'.$answers[1].'</label><br/>
+                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$correct[1].' id="B'.$i.'"><label class="radio_label" for="B'.$i.'">'.$answers[1].'</label><br/>
                         
-                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$answers[2].' id="C'.$i.'"><label class="radio_label" for="C'.$i.'">'.$answers[2].'</label><br/>
+                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$correct[2].' id="C'.$i.'"><label class="radio_label" for="C'.$i.'">'.$answers[2].'</label><br/>
                         
-                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$answers[3].' id="D'.$i.'"><label class="radio_label" for="D'.$i.'">'.$answers[3].'</label><br/>';
+                        <input class="radio" type="radio" name="a'.($i+1).'" value='.$correct[3].' id="D'.$i.'"><label class="radio_label" for="D'.$i.'">'.$answers[3].'</label><br/>';
             } else {
                 
                 if ($questions[$i][4] == "True") {
@@ -41,6 +46,7 @@
                         
                         <input class="radio" type="radio" name="a'.($i+1).'" value='.$fValue.' id="F'.$i.'"><label class="radio_label" for="F'.$i.'">False</label><br/>';
             }
+            unset($correct);
             unset($answers);
         }    
                         

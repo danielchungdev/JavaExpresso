@@ -36,7 +36,7 @@
             
                 $score = 0;
                 foreach ($_POST as $response) {
-                    if ($response == $quiz[4]) {
+                    if ($response == "correct") {
                         $score++;
                     }
                 }
@@ -195,9 +195,7 @@ To store a single character, use char.</p>
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson1.php" onsubmit="return validate();" method="post">
                 <?php 
-                    if (isset($score)) {
-                    echo $score;
-                    }
+                    
                     include $path."assets/inc/quiz.php";
                 ?>
                 </form>
