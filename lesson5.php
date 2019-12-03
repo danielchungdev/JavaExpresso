@@ -52,7 +52,7 @@
                 <h1 class="lesson_header">Lesson 5</h1>
                 <h2 class="lesson_title">Objects</h2>
                 <p class="lesson_content">An object or class is user written code that represents a specific thing. It has a set of properties and methods that can
-                be accessed through refering the object.</p>
+                be accessed through referring the object.</p>
 
                 <p class="lesson_content">Think an object has several parts. It has a name, attributes and methods. The easier way to think about it it's imagining
                     something you want to describe for the sake of this lesson let's do a dog. We have to think for a generic name for the class any dog. So lets
@@ -67,7 +67,7 @@
                     because they are words and the age is of type int because age is a number.
                 </p>
                 <p class="lesson_content">
-                    Now that we have set every attribute to our Dog. We now need a way to create it. The way that you do this is creating a costructor. Everytime you
+                    Now that we have set every attribute to our Dog. We now need a way to create it. The way that you do this is creating a constructor. Everytime you
                     call this constructor think about giving birth to a dog. Constructors usually take parameters to create the object. Constructors look like this.
                 </p>
                 <img class="dog" src="assets/images/lesson5/constructor.png" alt="constructor">
