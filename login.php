@@ -15,7 +15,9 @@
         $stmt->execute();
         $stmt->bind_result($res);
 		$stmt->fetch();
+        echo "triggering if...";
         if (password_verify($_POST['psw'], $res)) {
+            echo "if triggered!";
             $_SESSION['login']=true;
             $_SESSION['email']=$email;
                 session_name($_POST['email'].'s');
