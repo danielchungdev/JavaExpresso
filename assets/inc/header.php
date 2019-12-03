@@ -8,8 +8,8 @@
 	<script src="<?php echo $path;?>assets/js/quiz.js"></script>
     <?php 
         if (!isset($_SESSION)) {
-            header("Location: login.php");
-            exit();
+            session_start();
+            var_dump($_SESSION);
         }
     ?>
 </head>

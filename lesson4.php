@@ -8,19 +8,7 @@
 	require $path.'../../../dbConnect.inc';
 
     if ($mysqli) {
-        if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            
-            $score = 0;
-            foreach ($_POST as $response) {
-                if ($response == "correct") {
-                    $score++;
-                }
-            }
-            $score = ($score / 3) * 100;
-            
-            $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
-                $mysqli -> query($sql);
-        }
+        
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
         $res = $mysqli -> query($sql);
@@ -41,6 +29,22 @@
         
         foreach ($nums as $n) {
             $questions[] = $quiz[$n];
+        }
+        
+        if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
+            
+            $score = 0;
+            foreach ($_POST as $response) {
+                if ($response == "correct") {
+                    $score++;
+                }
+            }
+            $score = ($score / 3) * 100;
+            
+            if(isset($_SESSION['email'])) {
+            $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
+                $mysqli -> query($sql);
+            }
         }
         
     }
