@@ -46,7 +46,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Registration</title>
-        <link rel="stylesheet" href="asset/css/styles.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
         <script src="assets/js/formVal.js"></script>
     </head>
     <body>

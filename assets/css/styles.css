@@ -390,12 +390,6 @@ input#submit{
     height: 30%;
 }
 
-
-/* container for login/registration */
-div.container {
-  width: 40vw;
-}
-
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
 /* START OF MEDIA QUERIES */
@@ -481,4 +475,47 @@ div.container {
     input#submit {
         font-size: var(--default-font-size);
     }
+}
+
+/* Login and Registration */
+.loginAndRegistration {
+  background-color: var(--dark-coffee);
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginAndRegistration #logo_image, .loginAndRegistration #logo_image img {
+  width: 70%;
+  text-align: center;
+}
+
+.loginAndRegistration label b{
+  color: var(--light-coffee);
+}
+
+.loginAndRegistration input{
+  border: none;
+  background-color: transparent;
+  font-size: var(--default-font-size);
+  color: var(--blonde-coffee);
+}
+
+.loginAndRegistration ::placeholder {
+  color: var(--blonde-coffee);
+}
+
+.loginAndRegistration input[type="submit"]{
+  border: none;
+  border-radius: 100px;
+  padding: calc(.5 * var(--default-font-size));
+  text-decoration: none;
+  font-size: calc(.5 * var(--default-font-size));
+  background-color: var(--blonde-coffee);
+  color: var(--medium-coffee);
+  cursor: pointer;
+  width: 100%;
 }
