@@ -71,5 +71,6 @@
                         ?>
            </div>
         </form>
+		<?php include("assets/inc/footer.php"); ?>
     </body>
 </html>

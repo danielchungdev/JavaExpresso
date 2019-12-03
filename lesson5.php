@@ -8,7 +8,7 @@
 	require $path.'../../../dbConnect.inc';
 
     if ($mysqli) {
-        
+
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
         $res = $mysqli -> query($sql);
@@ -30,7 +30,7 @@
         foreach ($nums as $n) {
             $questions[] = $quiz[$n];
         }
-        
+
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
 
             $score = 0;
@@ -46,7 +46,7 @@
                     $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = $email";
                     $mysqli -> query($sql);
             }
-    
+
         }
 
     }
@@ -85,23 +85,23 @@
                     Now in lesson 3 we learned about methods, you can create methods inside the class. So for example let's create a method in dogs that says bark.
                 </p>
                 <img src="assets/images/lesson5/methods.JPG" alt="Creating a method">
-                <p>Now everytime that this method is called the dog will bark. The way that you call methods is by .notation and you can only call public 
+                <p>Now everytime that this method is called the dog will bark. The way that you call methods is by .notation and you can only call public
                 methods inside of the class.</p>
                 <img src="assets/images/lesson5/howtocall.jpg" alt="how to call">
                 <img src="assets/images/lesson5/result.jpg" alt="results">
-                
+
             </div>
 
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson5.php" onsubmit="return validate();" method="post">
                 <?php
-                    
+
                     include $path."assets/inc/quiz.php";
                 ?>
                 </form>
             </div>
-
+			<?php include("assets/inc/footer.php"); ?>
         </div>
     </body>
 </html>

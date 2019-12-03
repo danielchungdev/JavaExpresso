@@ -152,6 +152,7 @@
               <br>
         </form>
      </div>
+     <?php include("assets/inc/footer.php"); ?>
  </body>
 
 </html>

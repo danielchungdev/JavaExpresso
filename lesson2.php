@@ -8,7 +8,7 @@
 	require $path.'../../../dbConnect.inc';
 
     if ($mysqli) {
-        
+
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
         $res = $mysqli -> query($sql);
@@ -30,7 +30,7 @@
         foreach ($nums as $n) {
             $questions[] = $quiz[$n];
         }
-        
+
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
 
             $score = 0;
@@ -46,7 +46,7 @@
                     $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = $email";
                     $mysqli -> query($sql);
             }
-            
+
 
         }
 
@@ -97,12 +97,12 @@
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson2.php" onsubmit="return validate();" method="post">
                 <?php
-                    
+
                     include $path."assets/inc/quiz.php";
                 ?>
                 </form>
             </div>
-
+						<?php include("assets/inc/footer.php"); ?>
         </div>
     </body>
 </html>

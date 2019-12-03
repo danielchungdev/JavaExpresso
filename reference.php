@@ -5,12 +5,13 @@
 	include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
 ?>
-            <div class="flex-container" style="width:70%">
+		<div class="references-table">
+            <div class="flex-container">
                 <div class="inner-element">
                     <h2>REFERENCES</h2>
                 </div>
             </div>
-            <div class="flex-container-table" style="width:70%">
+            <div class="flex-container-table">
                 <table>
                     <tr>
                         <th>URL</th>
@@ -34,9 +35,7 @@
                     </tr>
                 </table>
             </div>
-            <footer>
-                <!-- FOOTER GOES HERE -->
-            </footer>
-        </div>
+		</div>
+		<?php include("assets/inc/footer.php"); ?>
     </body>
 </html>

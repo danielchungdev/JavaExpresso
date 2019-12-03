@@ -519,3 +519,19 @@ input#submit{
   cursor: pointer;
   width: 100%;
 }
+
+.references-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container, .flex-container-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container-table th, .flex-container-table td {
+  font-size: calc(.5 * var(--default-font-size));
+}

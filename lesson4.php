@@ -8,7 +8,7 @@
 	require $path.'../../../dbConnect.inc';
 
     if ($mysqli) {
-        
+
 
         $sql = "SELECT question, c1, c2, c3, answer FROM $quizDB";
         $res = $mysqli -> query($sql);
@@ -17,7 +17,7 @@
                 $quiz[] = $rowHolder;
             }
         }
-        
+
         $nums[0] = rand(0,5);
         for($i = 1; $i < 3; $i++) {
             $n = rand(0,5);
@@ -26,13 +26,13 @@
             }
             $nums[$i] = $n;
         }
-        
+
         foreach ($nums as $n) {
             $questions[] = $quiz[$n];
         }
-        
+
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
-            
+
             $score = 0;
             foreach ($_POST as $response) {
                 if ($response == "correct") {
@@ -40,14 +40,14 @@
                 }
             }
             $score = ($score / 3) * 100;
-            
+
             if(isset($_SESSION['email'])) {
             $email = $_SESSION['email'];
                     $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = $email";
                     $mysqli -> query($sql);
             }
         }
-        
+
     }
 
 ?>
@@ -106,13 +106,13 @@
             <div id="quiz">
                 <h2 id="quiz_title">Quiz</h2>
                 <form action="lesson4.php" onsubmit="return validate();" method="post">
-                <?php 
-                    
+                <?php
+
                     include $path."assets/inc/quiz.php";
                 ?>
                 </form>
             </div>
-
+			<?php include("assets/inc/footer.php"); ?>
         </div>
     </body>
 </html>
