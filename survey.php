@@ -4,9 +4,9 @@
     $path = './';
   	require $path.'../../../dbConnect.inc';
    
-      if(!empty($_POST['name']) && !empty($_POST['name']) ){
+//      if(!empty($_POST['name']) && !empty($_POST['name']) ){
     if ($mysqli) {
-        
+        if(!empty($_POST['name']) && !empty($_POST['name']) ){
 	  if (isset($_POST['name']) && isset($_POST['comment'])) {
           
         $name=$_POST['name'];
@@ -20,6 +20,7 @@
        
       
       }// End of if isset
+        }
       $res=$mysqli->query('select name, comment from gComments');
 	  if($res){
 		while($rowHolder = mysqli_fetch_array($res,MYSQLI_ASSOC)){
@@ -27,7 +28,7 @@
 		}//end the while loo
       }
     }// end of the connect to databbase 
-      }
+      //}
           ?>
 <!DOCTYPE html>
 <html lang="en">
