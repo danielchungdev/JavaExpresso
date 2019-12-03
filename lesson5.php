@@ -42,8 +42,9 @@
             $score = ($score / 3) * 100;
 
             if(isset($_SESSION['email'])) {
-            $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where userEmail = ".$_SESSION['email'];
-                $mysqli -> query($sql);
+            $email = $_SESSION['email'];
+                    $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = $email";
+                    $mysqli -> query($sql);
             }
     
         }

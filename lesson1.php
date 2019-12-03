@@ -34,18 +34,21 @@
         if (isset($_POST["a1"]) && isset($_POST["a2"]) && isset($_POST["a3"])) {
             
             
-                $score = 0;
+                $score = 0.0;
                 foreach ($_POST as $response) {
                     if ($response == "correct") {
                         $score++;
                     }
                 }
-                $score = ($score / 3) * 100;
+                $score = ($score / 3) * 100.0;
             
                 if(isset($_SESSION['email'])) {
-                    $sql = "INSERT INTO accountDb ($quizNum) VALUES ($score) where  userEmail = ".$_SESSION['email'];
-                    echo ($sql);
+                    
+                    $email = $_SESSION['email'];
+                    $sql = "UPDATE accountDb SET $quizNum = $score where userEmail = $email";
                     $mysqli -> query($sql);
+                    
+                
                 }
             
         }
