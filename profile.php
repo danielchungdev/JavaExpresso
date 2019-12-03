@@ -5,7 +5,9 @@
     include $path.'assets/inc/header.php';
 	require $path.'../../../dbConnect.inc';
 
-    session_start();
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 
     if ($mysqli) {
         
@@ -16,9 +18,22 @@
                 $scores[] = $rowHolder;
             }
             
-            
+            echo '<table id="score_table">
+                    <tr>
+                        <th>Quiz Number</th>
+                        <th>Quiz Score</th>
+                    </tr>';
+            for ($i = 1; $i <= count($scores); $i++) {
+                echo '<tr>
+                        <td>'.$i.'</td>
+                        <td>'.$scores["quiz".$i."Score"].'</td>
+                        </tr>';
+            }
+            echo '</table>';
             
         }
         
     }
 ?>
+</body>
+</html>
