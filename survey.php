@@ -45,7 +45,7 @@
 	<h1>Please Give Us Your Feedback</h1>
 	   <form id="cForm" name="commentForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return post();">
         <h2>Please Enter Your Name</h2>
-             <input id="nameIn" type="text" name="name"/>
+            <input id="nameIn" type="text" name="name"/>
 
             <br>
             <h2>We would Love To Know What You Thought</h2>
