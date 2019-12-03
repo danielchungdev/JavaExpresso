@@ -15,12 +15,12 @@
 }
 
 /* set every page to be in single column format */
-html, body {
+body, html {
+  align-items: center;
   background-color: var(--burnt-coffee);
-  font-family: Verdana, Geneva, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
   scroll-snap-type: y mandatory;
 }
 
@@ -284,9 +284,14 @@ ul#navigation {
 }
 li {
     list-style: none;
-    width: calc(3.5 * var(--default-font-size));
+    /*width: calc(3.5 * var(--default-font-size));*/
     padding: 1.5vw;
 }
+
+.content_list {
+  font-size: calc(.5 * var(--default-font-size));
+}
+
 a.navlink {
     text-decoration: none;
     color: var(--blonde-coffee);
@@ -340,13 +345,6 @@ p.lesson_content {
     margin-bottom: var(--default-font-size);
     font-size: calc(.5 * var(--default-font-size));
 }
-span.bold {
-    font-weight: 600;
-}
-li.content_list {
-    width: 100%;
-    font-size: calc(.5 * var(--default-font-size));
-}
 
 /* wrapper for the quiz */
 div#quiz {
@@ -390,6 +388,12 @@ input#submit{
 .dog {
     width: 50%;
     height: 30%;
+}
+
+
+/* container for login/registration */
+div.container {
+  width: 40vw;
 }
 
 /* START OF MEDIA QUERIES */
@@ -453,10 +457,6 @@ input#submit{
   p.lesson_content {
     font-size: var(--default-font-size);
   }
-    
-    li.content_list {
-        font-size: var(--default-font-size);
-    }
 
   h1.lesson_header {
     font-size: calc(3 * var(--default-font-size));

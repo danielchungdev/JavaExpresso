@@ -13,7 +13,9 @@
 	<body>
 	  <div id="page">
 			<nav id="navbar">
-	      <img id="icon" src="assets/images/white_horizontal.png" alt="Java Express-o" title="Java Express-o">
+				<a href="index.html">
+					<img id="icon" src="assets/images/white_horizontal.png" alt="Java Express-o" title="Java Express-o">
+				</a>
 	      <ul id="navigation">
 	          <li><a href="<?php echo $path;?>lesson1.php" class="navlink">Lesson 1</a></li>
 	          <li><a href="<?php echo $path;?>lesson2.php" class="navlink">Lesson 2</a></li>

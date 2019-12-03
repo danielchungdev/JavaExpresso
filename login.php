@@ -2,7 +2,7 @@
     session_start();
 
     $path = './';
-    require $path.'../../dbConnect.inc';
+    require $path.'../../../dbConnect.inc';
     
 
     if(!empty($_POST['email']) && !empty($_POST['psw']) ){
@@ -19,16 +19,17 @@
             $_SESSION['login']=true;
             $_SESSION['email']=$email;
                 session_name($_POST['email'].'s');
-			header('Location: survey.php');
+            var_dump($_SESSION['email']);
+			header('Location: index.html');
         }
         else{
-            
+            session_destroy(); 
                 
         }
        $stmt->close();
     }
 
-    session_destroy(); 
+    
          
      
 ?>
@@ -57,6 +58,10 @@
                 <br>
                 <br>
                 <input type="submit" name="Submit"/>
+                <br>
+                <br>
+                <p>Need an account? <a style="color:#F5EDDA; " href="registration.php">Register</a>.</p>
+                
             </form>
         </div>
         
